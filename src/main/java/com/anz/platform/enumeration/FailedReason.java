@@ -17,7 +17,7 @@ public enum FailedReason {
   //
   DB_CONNECTION("DB_CONNECTION", ""),
   //
-  BACKEND_ERROR("BACKEND_ERROR-INVALID", "");
+  BACKEND_ERROR("BACKEND_ERROR", "");
 
   private String key;
   private String value;
