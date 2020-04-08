@@ -7,7 +7,7 @@
 	<artifactId>notification-lambda</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<name>notification-lambda</name>
-	<description>AnZ Notification Report Function</description>
+	<description>AnZ Notification Lambda Function</description>
 
 	<properties>
 		<java.version>1.8</java.version>
