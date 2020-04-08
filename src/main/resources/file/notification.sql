@@ -1,24 +1,5 @@
 
--- Person --
-DROP TABLE `Person`;
-CREATE TABLE `Person` (
-  `id` VARCHAR(255) NOT NULL,
-
-  `firstName` VARCHAR(255) NULL,
-  `lastName` VARCHAR(2555) NULL,
-  `address` VARCHAR(2555) NULL,
-  `city` VARCHAR(2555) NULL,
-  PRIMARY KEY (`id`));
-
-INSERT INTO `Person` (id, firstName, lastName, address, city)
-VALUES  ('1', 'Minh', 'Nguyen', '140145', 'Singapore');
-INSERT INTO `Person` (id, firstName, lastName, address, city)
-VALUES  ('2', 'Minh', 'Nguyen', '140145', 'Singapore');
-
-SELECT * FROM `Person`;
-
-
--- Person --
+-- Notification --
 DROP TABLE `Notification`;
 CREATE TABLE `Notification` (
   `id` VARCHAR(255) NOT NULL,
