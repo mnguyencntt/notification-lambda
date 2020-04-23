@@ -30,7 +30,7 @@ public class NotificationRequest {
   private String sesEmail;
 
   // Function-Type
-  private NotificationFunctionType functionType; // SEND - UPDATE - FIND - FINDALL - DELETE
+  private NotificationFunctionType functionType; // SEND - UPDATE - FINDID - FINDALL - DELETE
   private Map<String, String> additionalFields;
 
   public String getNotificationType() {
