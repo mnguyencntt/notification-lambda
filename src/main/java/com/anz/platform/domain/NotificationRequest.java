@@ -30,6 +30,7 @@ public class NotificationRequest {
   private String sesEmail;
 
   // Function-Type
+  private String username;
   private NotificationFunctionType functionType; // SEND - UPDATE - FINDID - FINDALL - DELETE
   private Map<String, String> additionalFields;
 
