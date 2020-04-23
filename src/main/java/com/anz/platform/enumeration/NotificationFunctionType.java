@@ -9,7 +9,7 @@ public enum NotificationFunctionType {
   //
   UPDATE("", "Update notification"),
   //
-  FIND("", "Find notification by Id"),
+  FINDID("", "Find notification by Id"),
   //
   FINDALL("", "Find all notifications"),
   //

@@ -3,7 +3,7 @@ package com.anz.platform.model;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import com.anz.platform.model.Notification;
 
 public class NotificationTest {
@@ -28,7 +28,7 @@ public class NotificationTest {
       assertEquals("12345", notification.findValues()[0]);
       assertEquals("", notification.findValues()[1]);
       assertEquals("", notification.findValues()[2]);
-    } catch (IllegalArgumentException | IllegalAccessException e) {
+    } catch (IllegalArgumentException e) {
       fail();
     }
   }

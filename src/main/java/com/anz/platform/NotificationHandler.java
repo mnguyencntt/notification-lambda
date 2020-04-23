@@ -25,7 +25,7 @@ public class NotificationHandler implements RequestHandler<NotificationRequest, 
       final NotificationFunction function = new NotificationFunction();
       if (NotificationFunctionType.SEND.equals(request.getFunctionType())) {
         return function.sendNotification(request, context);
-      } else if (NotificationFunctionType.FIND.equals(request.getFunctionType())) {
+      } else if (NotificationFunctionType.FINDID.equals(request.getFunctionType())) {
         return function.findNotification(request, context);
       } else if (NotificationFunctionType.FINDALL.equals(request.getFunctionType())) {
         return function.findNotifications(request, context);
