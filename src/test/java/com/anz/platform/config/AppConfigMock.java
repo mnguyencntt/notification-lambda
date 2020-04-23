@@ -12,7 +12,7 @@ public class AppConfigMock {
     // final String dbUsername = "***";
     // final String dbPassword = "***";
 
-    final String dbEndpoint = "jdbc:h2:mem:;INIT=runscript from 'classpath:file/users.sql'";
+    final String dbEndpoint = "jdbc:h2:mem:;INIT=runscript from 'classpath:file/notification.sql'";
     final String dbUsername = "sa";
     final String dbPassword = "";
     final String dbSqlDriver = "org.h2.Driver";
