@@ -30,7 +30,7 @@ public class NotificationService {
       log.info(Constants.SUCCESSFUL_CONNECTION);
       final ResultSetHandler<List<T>> resultHandler = new BeanListHandler<>(clazz);
       try {
-        final String selectAll = "SELECT * FROM Notification";
+        final String selectAll = String.format("SELECT * FROM %s", clazz.getSimpleName());
         final List<T> items = new QueryRunner().query(connection, selectAll, resultHandler);
         log.info("Found {} Items", items.size());
         return items;
@@ -49,7 +49,7 @@ public class NotificationService {
       log.info(Constants.SUCCESSFUL_CONNECTION);
       final ResultSetHandler<T> resultHandler = new BeanHandler<>(clazz);
       try {
-        final String selectById = "SELECT * FROM Notification WHERE id = ?";
+        final String selectById = String.format("SELECT * FROM %s WHERE id = ?", clazz.getSimpleName());
         T query = new QueryRunner().query(connection, selectById, resultHandler, id);
         log.info("Found Item by '{}'", id);
         return query;
@@ -68,7 +68,7 @@ public class NotificationService {
       log.info(Constants.SUCCESSFUL_CONNECTION);
       final ResultSetHandler<T> resultHandler = new BeanHandler<>(clazz);
       try {
-        final String selectByField = String.format("SELECT * FROM Notification WHERE %s = ?", fieldName);
+        final String selectByField = String.format("SELECT * FROM %s WHERE %s = ?", clazz.getSimpleName(), fieldName);
         T query = new QueryRunner().query(connection, selectByField, resultHandler, fieldValue);
         log.info("Found Item by '{}'", fieldValue);
         return query;
@@ -109,7 +109,7 @@ public class NotificationService {
     try (final Connection connection = DriverManager.getConnection(dbInfo.getEndpoint(), dbInfo.getUsername(), dbInfo.getPassword())) {
       log.info(Constants.SUCCESSFUL_CONNECTION);
       try {
-        final String updateSQL = String.format("Update %s SET %s WHERE Id=%s", item.getClass().getSimpleName(), item.findFieldValuesJoining("Id"), item.getId());
+        final String updateSQL = String.format("Update %s SET %s WHERE Id='%s'", item.getClass().getSimpleName(), item.findFieldValuesJoining("Id"), item.getId());
         log.info(updateSQL);
         return new QueryRunner().update(connection, updateSQL);
       } finally {
