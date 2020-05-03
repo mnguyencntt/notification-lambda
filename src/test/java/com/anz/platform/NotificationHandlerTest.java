@@ -9,12 +9,12 @@ import com.anz.platform.domain.NotificationRequest;
 import com.anz.platform.enumeration.NotificationFunctionType;
 import com.anz.platform.util.JsonUtils;
 
+@Disabled
 public class NotificationHandlerTest extends BaseTest {
   private final NotificationHandler userHandler = new NotificationHandler();
 
   private final String jsonRequesst = "";
 
-  @Disabled
   @Test
   public void testFindAllUsers() {
     final NotificationRequest request = JsonUtils.toObject(jsonRequesst, NotificationRequest.class);
