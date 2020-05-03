@@ -12,8 +12,7 @@ import com.anz.platform.exception.NotificationException;
 import com.anz.platform.model.Notification;
 
 public final class CsvFileWriter {
-
-  private CsvFileWriter() {
+  CsvFileWriter() {
     throw new UnsupportedOperationException();
   }
 

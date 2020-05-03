@@ -93,7 +93,7 @@ public abstract class BaseTest {
     try {
       List<Map<String, Object>> maps = run.query(conn, "SELECT * FROM Notification", new MapListHandler());
       // System.out.println(maps);
-      assertEquals(1, maps.size());
+      assertEquals(2, maps.size());
     } finally {
       DbUtils.close(conn);
     }

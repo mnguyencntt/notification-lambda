@@ -10,8 +10,7 @@ import net.lingala.zip4j.model.ZipParameters;
 import net.lingala.zip4j.util.Zip4jConstants;
 
 public final class ZipUtil {
-
-  private ZipUtil() {
+  ZipUtil() {
     throw new UnsupportedOperationException();
   }
 

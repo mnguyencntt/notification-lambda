@@ -1,6 +1,7 @@
 
 -- Notification --
-DROP TABLE `Notification`;
+DROP TABLE IF EXISTS `Notification`;
+
 CREATE TABLE `Notification` (
   `id` VARCHAR(255) NOT NULL,
 
