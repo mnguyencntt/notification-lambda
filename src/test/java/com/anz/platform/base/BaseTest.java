@@ -19,7 +19,7 @@ import java.util.Map;
 import org.apache.commons.dbutils.DbUtils;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.MapListHandler;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.anz.platform.config.AppConfigMock;
@@ -73,7 +73,7 @@ public abstract class BaseTest {
     return strBuffer.toString();
   }
 
-  @Ignore
+  @Disabled
   @Test
   public void loadSqlFile() throws Exception {
     File file = getFileFromResources("file/notification.sql");
@@ -82,7 +82,7 @@ public abstract class BaseTest {
     assertTrue(ObjectUtils.isNotEmpty(printFile));
   }
 
-  @Ignore
+  @Disabled
   @Test
   public void testUserDbConnection() throws SQLException, ClassNotFoundException {
     final DbInfo dbInfo = new AppConfigMock().getDbInfo();

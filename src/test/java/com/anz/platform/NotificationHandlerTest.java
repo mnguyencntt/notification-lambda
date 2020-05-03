@@ -1,7 +1,7 @@
 package com.anz.platform;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import com.anz.platform.base.BaseTest;
 import com.anz.platform.domain.ApiResponse;
@@ -14,7 +14,7 @@ public class NotificationHandlerTest extends BaseTest {
 
   private final String jsonRequesst = "";
 
-  @Ignore
+  @Disabled
   @Test
   public void testFindAllUsers() {
     final NotificationRequest request = JsonUtils.toObject(jsonRequesst, NotificationRequest.class);

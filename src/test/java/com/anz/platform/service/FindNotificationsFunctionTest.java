@@ -1,6 +1,6 @@
 package com.anz.platform.service;
 
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import com.anz.platform.base.BaseTest;
 import com.anz.platform.config.AppConfig;
@@ -11,7 +11,7 @@ import com.anz.platform.domain.NotificationRequest;
 public class FindNotificationsFunctionTest extends BaseTest {
   private AppConfigMock appConfigMock = new AppConfigMock();
 
-  @Ignore
+  @Disabled
   @Test
   public void testNotification() {
     NotificationFunction notificationFunction = new NotificationFunction();

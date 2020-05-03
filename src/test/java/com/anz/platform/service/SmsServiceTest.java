@@ -1,12 +1,12 @@
 package com.anz.platform.service;
 
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import com.anz.platform.config.AppConfigMock;
 import com.anz.platform.domain.MessageInfo;
 
 public class SmsServiceTest {
-  @Ignore
+  @Disabled
   @Test
   public void testSendSms() {
     final String subject = String.format("[AnZ-Platform] %s with OrderId-%s", "ORDER_CREATED", "OI12345");
